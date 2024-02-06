@@ -14,8 +14,10 @@
     <link href="~/lumia/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
     <link href="~/lumia/assets/css/flexslider.css" rel="stylesheet">
     <link href="~/lumia/assets/css/style.css" rel="stylesheet">
+    <link href="~/lumia/assets/css/Style2.css" rel="stylesheet">
     <link href="~/lumia/assets/color/default.css" rel="stylesheet">
     <link href="~/lumia/assets/font/https://fonts.googleapis.com/css?family=Droid+Serif:400,600,400italic|Open+Sans:400,600,700" rel="stylesheet">
+
     
 
     <!-- fav and touch icons -->
@@ -113,7 +115,12 @@
                 </div>
             </div>
         </header>
+        @RenderSection("header",false)
+       
+       
+       
         @RenderBody()
+       
 
         @*    <div class="container">
         <main role="main" class="pb-3">

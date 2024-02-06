@@ -12,5 +12,7 @@ namespace TechCareerActivityProject.DAL.Models
         public string ConcertType { get; set; }
         public string ConcertLocation { get; set; }
         public string ConcertImage { get; set; }
+        public string ConcertDescription { get; set; }
+        public string ConcertTime { get; set; }
     }
 }

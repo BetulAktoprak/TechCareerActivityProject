@@ -1,0 +1,49 @@
+﻿@model List<TechCareerActivityProject.DAL.Models.Exhibition>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @await Html.PartialAsync("_header")
+}
+
+
+<section id="maincontent">
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <h2>..</h2>
+                <aside>
+                    <div class="widget">
+                        <h4 class="rheading">Öne Çıkanlar<span></span></h4>
+                        <ul class="cat">
+                            <li><a href="#">Konser</a></li>
+                            <li><a href="#">Festival</a></li>
+                            <li><a href="#">Sahne</a></li>
+                            <li><a href="#">Sergi</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="span8">
+                <h2>Konser Listesi</h2>
+                <div id="concerts">
+                    @foreach (var item in Model)
+                    {
+                        <div class="concert">
+                            <img src="~/lumia/assets/img/dummies/exhibition/@item.ExhibitionImage" alt="@item.ExhibitionType" width="200" height="250" />
+                            <p>@item.ExhibitionName</p>
+                            <p>@item.ExhibitionDescription</p>
+                            <p>@item.ExhibitionTime</p>
+                            <p>@item.ExhibitionLocation</p>
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
