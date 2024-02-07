@@ -1,4 +1,5 @@
-﻿
+﻿@model TechCareerActivityProject.DAL.Models.Home
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -48,53 +49,22 @@
         </div>
 
         <div class="row">
+            
+                @foreach (var item in Model.ConcertList)
+                {
             <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/concert/ab6761610000e5ebefc7e159821a28351587cfba.jpg" alt="" />
+                    <img src="~/lumia/assets/img/dummies/concert/@item.ConcertImage" alt="" width="250" height="220" />
                 <div class="box">
                     <div class="divcenter">
                         <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h4><b>BERKAY</b><br />Pop Müzik</h4>
-                        <p><i class="icon-calendar"></i>10 Şubat Cumartesi</p>
-                        <p><i class="icon-map-marker"></i>Bostancı Gösteri Merkezi</p>
+                        <h4><b>@item.ConcertName</b><br />@item.ConcertType</h4>
+                        <p><i class="icon-calendar"></i>@item.ConcertTime</p>
+                        <p><i class="icon-map-marker"></i>@item.ConcertLocation</p>
                     </div>
                 </div>
             </div>
-
-            <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/concert/innellea-web-mx3vo2qjss57-crop-480-480.jpg" alt="" />
-                <div class="box">
-                    <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h4><b>İNNELLEA</b><br />Elektronik Müzik</h4>
-                        <p><i class="icon-calendar"></i>10 Şubat Cumartesi</p>
-                        <p><i class="icon-map-marker"></i>Zorlu PSM</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/concert/channels4_profile.jpg" alt="" />
-                <div class="box">
-                    <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h4><b>SILA</b><br />Pop Müzik</h4>
-                        <p><i class="icon-calendar"></i>14 Şubat Çarşamba</p>
-                        <p><i class="icon-map-marker"></i>Zorlu PSM</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/concert/KgxLgGSL_400x400.jpg" alt="" />
-                <div class="box">
-                    <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h4><b>MABEL MATİZ</b><br />Pop Müzik</h4>
-                        <p><i class="icon-calendar"></i>14 Şubat Çarşamba</p>
-                        <p><i class="icon-map-marker"></i>Volkswagen Arena</p>
-                    </div>
-                </div>
-            </div>
+            }
+           
         </div>
 
         <div class="row">
@@ -102,54 +72,21 @@
         </div>
 
         <div class="row">
-            <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/festival/86b347b9-f785-4204-b5f1-33240cfde830.jpg" alt="" />
-                <div class="box">
-                    <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h5><b>SONAR İSTANBUL 2024</b><br />Festival</h5>
-                        <p><i class="icon-calendar"></i>26-28 Nisan</p>
-                        <p><i class="icon-map-marker"></i>Zorlu PSM</p>
-                    </div>
-                </div>
-            </div>
 
+            @foreach(var item in Model.FestivalList){
             <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/festival/holifest-1.jpg" alt="" />
+                    <img src="~/lumia/assets/img/dummies/festival/@item.FestivalImage" alt="" width="250" height="220" />
                 <div class="box">
                     <div class="divcenter">
                         <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h5><b>HOLİFEST</b><br /><br />Festival</h5>
-                        <p><i class="icon-calendar"></i>25-27 Mayıs</p>
-                        <p><i class="icon-map-marker"></i>Life Park</p>
+                        <h5><b>@item.FestivalName</b><br />@item.FestivalType</h5>
+                        <p><i class="icon-calendar"></i>@item.FestivalTime</p>
+                        <p><i class="icon-map-marker"></i>@item.FestivalLocation</p>
                     </div>
                 </div>
             </div>
+            }
 
-            <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/festival/indir (1).jpg" alt="" />
-                <br />
-                <div class="box">
-                    <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h5><b>AKDENİZ GENÇLİK FESTİVALİ</b><br />Festival</h5>
-                        <p><i class="icon-calendar"></i>3-5 Mayıs</p>
-                        <p><i class="icon-map-marker"></i>Adana</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/festival/kocaeli-muzik-festivali.jpg" alt="" />
-                <div class="box">
-                    <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h5><b>KOCAELİ MÜZİK FESTİVALİ</b><br />Müzik Festivali</h5>
-                        <p><i class="icon-calendar"></i>10-12 Mayıs</p>
-                        <p><i class="icon-map-marker"></i>Kocaeli</p>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="row">
@@ -157,53 +94,21 @@
         </div>
 
         <div class="row">
-            <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/stage/0000190_cimri.jpg" alt="" />
-                <div class="box">
-                    <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h4><b>CİMRİ</b><br />Tiyatro</h4>
-                        <p><i class="icon-calendar"></i>14 Şubat Çarşamba</p>
-                        <p><i class="icon-map-marker"></i>Maximum UNIQ Hall</p>
-                    </div>
-                </div>
-            </div>
 
+            @foreach(var item in Model.StageList){
             <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/stage/aydinlikevler-yatay.jpg" alt="" />
+                    <img src="~/lumia/assets/img/dummies/stage/@item.StageImage" alt="" width="250" height="220" />
                 <div class="box">
                     <div class="divcenter">
                         <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h4><b>AYDINLIKEVLER</b><br />Tiyatro</h4>
-                        <p><i class="icon-calendar"></i>15 Şubat Perşembe</p>
-                        <p><i class="icon-map-marker"></i>Bostancı Gösteri Merkezi</p>
+                        <h4><b>@item.StageName</b><br />@item.StageType</h4>
+                        <p><i class="icon-calendar"></i>@item.StageTime</p>
+                        <p><i class="icon-map-marker"></i>@item.StageLocation</p>
                     </div>
                 </div>
             </div>
-
-            <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/stage/zengin-mutfagi-04.jpg" alt="" />
-                <div class="box">
-                    <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h4><b>ZENGİN MUTFAĞI</b><br />Tiyatro</h4>
-                        <p><i class="icon-calendar"></i>16 Şubat Cuma</p>
-                        <p><i class="icon-map-marker"></i>Maximum UNIQ Hall</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/stage/396024018_18391995217028468_7905172375322033882_n-2-1024x574.jpg" alt="" />
-                <div class="box">
-                    <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h4><b>MONTAİGNE</b><br />Tiyatro</h4>
-                        <p><i class="icon-calendar"></i>17 Şubat Cumartesi</p>
-                        <p><i class="icon-map-marker"></i>Oda Tiyatrosu</p>
-                    </div>
-                </div>
-            </div>
+            }
+            
         </div>
 
         <div class="row">
@@ -211,53 +116,21 @@
         </div>
 
         <div class="row">
-            <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/exhibition/mat_collishaw_heterosis.jpg" alt="" />
-                <div class="box">
-                    <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h4><b>MAT COLLISHAW: ARİTMİ</b><br />Sergi</h4>
-                        <p><i class="icon-calendar"></i>18 Ağustos'a Kadar</p>
-                        <p><i class="icon-map-marker"></i>Borusan Contemporary</p>
-                    </div>
-                </div>
-            </div>
 
+            @foreach(var item in Model.ExhibitionList){
             <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/exhibition/yasasin-cumhuriyet-is-sanat-1.jpg" alt="" />
+                    <img src="~/lumia/assets/img/dummies/exhibition/@item.ExhibitionImage" alt="" width="250" height="220" />
                 <div class="box">
                     <div class="divcenter">
                         <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h4><b>YAŞASIN CUMHURİYET</b><br />Sergi</h4>
-                        <p><i class="icon-calendar"></i>31 Aralık'a Kadar</p>
-                        <p><i class="icon-map-marker"></i>İş Bankası Müzesi</p>
+                        <h4><b>@item.ExhibitionName</b><br />@item.ExhibitionType</h4>
+                        <p><i class="icon-calendar"></i>@item.ExhibitionTime</p>
+                        <p><i class="icon-map-marker"></i>@item.ExhibitionLocation</p>
                     </div>
                 </div>
             </div>
-
-            <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/exhibition/1695900048_Anamur__Mersin__1982.jpg" alt="" />
-                <div class="box">
-                    <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h4><b>RENKLİ ANADOLU</b><br />Sergi</h4>
-                        <p><i class="icon-calendar"></i>7 Nisan'a Kadar</p>
-                        <p><i class="icon-map-marker"></i>Ara Güler Müzesi</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="span3 features e_pulse">
-                <img src="~/lumia/assets/img/dummies/exhibition/aac10b45914a69ae7bc7db3abf5d6bab.jpg" alt="" />
-                <div class="box">
-                    <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
-                        <h4><b>KENDİ GÖLGESİNDE</b><br />Sergi</h4>
-                        <p><i class="icon-calendar"></i>7 Nisan'a Kadar</p>
-                        <p><i class="icon-map-marker"></i>Arter</p>
-                    </div>
-                </div>
-            </div>
+            }
+           
         </div>
 
         <div class="row">
@@ -277,13 +150,14 @@
                             <div class="carousel-wrapper">
                                 <ul class="da-thumbs">
 
+                                    @foreach(var item in Model.ImageList){
                                     <li>
-                                        <img src="~/lumia/assets/img/dummies/concert/perdenin-ardindakiler-konseri-37379.jpg" alt="" />
+                                            <img src="~/lumia/assets/img/dummies/concert/@item.ImageUrl" alt="" width="150" height="170" />
                                         <article class="da-animate da-slideFromRight">
                                             <a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg">
                                                 <i class="icon-zoom-in icon-rounded icon-48 active"></i>
                                             </a>
-                                            <a href="portfolio-detail.html">
+                                            <a href="@item.Link">
                                                 <i class="icon-link icon-rounded icon-48 active"></i>
                                             </a>
                                             <div class="hidden-tablet">
@@ -291,101 +165,8 @@
                                             </div>
                                         </article>
                                     </li>
-
-                                    <li>
-                                        <img src="~/lumia/assets/img/dummies/concert/gokhan-turkmen-202312281545432a30a0a4c2154d1196355b71880f6039.jpg" alt="" />
-                                        <article class="da-animate da-slideFromRight">
-                                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg">
-                                                <i class="icon-zoom-in icon-rounded icon-48 active"></i>
-                                            </a>
-                                            <a href="portfolio-detail.html">
-                                                <i class="icon-link icon-rounded icon-48 active"></i>
-                                            </a>
-                                            <div class="hidden-tablet">
-                                                <p>Dark apps</p>
-                                            </div>
-                                        </article>
-                                        <br />
-                                    </li>
-
-                                    <li>
-                                        <img src="~/lumia/assets/img/dummies/concert/PIylWQIplEaSkhX4yhTxQA.jpg" alt="" />
-                                        <article class="da-animate da-slideFromRight">
-                                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg">
-                                                <i class="icon-zoom-in icon-rounded icon-48 active"></i>
-                                            </a>
-                                            <a href="portfolio-detail.html">
-                                                <i class="icon-link icon-rounded icon-48 active"></i>
-                                            </a>
-                                            <div class="hidden-tablet">
-                                                <p>Mobile apps</p>
-                                            </div>
-                                            
-                                        </article>
-                                        <br />
-                                    </li>
-
-                                    <li>
-                                        <img src="~/lumia/assets/img/dummies/concert/unnamed.jpg" alt="" />
-                                        <article class="da-animate da-slideFromRight">
-                                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg">
-                                                <i class="icon-zoom-in icon-rounded icon-48 active"></i>
-                                            </a>
-                                            <a href="portfolio-detail.html">
-                                                <i class="icon-link icon-rounded icon-48 active"></i>
-                                            </a>
-                                            <div class="hidden-tablet">
-                                                <p>Mobile template</p>
-                                            </div>
-
-                                        </article>
-                                        <br /><br /><br /><br /><br />
-                                    </li>
-
-                                    <li>
-                                        <img src="~/lumia/assets/img/dummies/concert/b48f5c93c5d492fdb8c5b4108741450b.jpg" alt="" />
-                                        <article class="da-animate da-slideFromRight">
-                                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg">
-                                                <i class="icon-zoom-in icon-rounded icon-48 active"></i>
-                                            </a>
-                                            <a href="portfolio-detail.html">
-                                                <i class="icon-link icon-rounded icon-48 active"></i>
-                                            </a>
-                                            <div class="hidden-tablet">
-                                                <p>Business theme</p>
-                                            </div>
-                                        </article>
-                                    </li>
-
-                                    <li>
-                                        <img src="~/lumia/assets/img/dummies/concert/Sefo.jpg" alt="" />
-                                        <article class="da-animate da-slideFromRight">
-                                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg">
-                                                <i class="icon-zoom-in icon-rounded icon-48 active"></i>
-                                            </a>
-                                            <a href="portfolio-detail.html">
-                                                <i class="icon-link icon-rounded icon-48 active"></i>
-                                            </a>
-                                            <div class="hidden-tablet">
-                                                <p>Portfolio graphic</p>
-                                            </div>
-                                        </article>
-                                    </li>
-
-                                    <li>
-                                        <img src="~/lumia/assets/img/dummies/concert/ab67616d0000b273f22f0a3ab76b923df54b73b0.jpg" alt="" />
-                                        <article class="da-animate da-slideFromRight">
-                                            <a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg">
-                                                <i class="icon-zoom-in icon-rounded icon-48 active"></i>
-                                            </a>
-                                            <a href="portfolio-detail.html">
-                                                <i class="icon-link icon-rounded icon-48 active"></i>
-                                            </a>
-                                            <div class="hidden-tablet">
-                                                <p>Portfolio graphic</p>
-                                            </div>
-                                        </article>
-                                    </li>
+                                    }
+                                    
 
                                 </ul>
                             </div>

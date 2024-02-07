@@ -18,12 +18,7 @@
                 <aside>
                     <div class="widget">
                         <h4 class="rheading">Öne Çıkanlar<span></span></h4>
-                        <ul class="cat">
-                            <li><a href="#">Konser</a></li>
-                            <li><a href="#">Festival</a></li>
-                            <li><a href="#">Sahne</a></li>
-                            <li><a href="#">Sergi</a></li>
-                        </ul>
+                        @await Component.InvokeAsync("Genres")
                     </div>
                 </aside>
             </div>
