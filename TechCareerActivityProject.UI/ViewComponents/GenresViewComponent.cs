@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TechCareerActivityProject.DAL.Data;
 using TechCareerActivityProject.DAL.Models;
 
 namespace TechCareerActivityProject.UI.ViewComponents
@@ -7,14 +8,8 @@ namespace TechCareerActivityProject.UI.ViewComponents
     {
         public IViewComponentResult Invoke()
         {
-            var genreList = new List<Genre>()
-            {
-                new Genre {Name = "Konser"},
-                new Genre {Name = "Festival"},
-                new Genre {Name = "Sahne"},
-                new Genre {Name = "Sergi"}
-            };
-            return View(genreList);
+            
+            return View(GenreRepository.Genres);
         }
     }
 }

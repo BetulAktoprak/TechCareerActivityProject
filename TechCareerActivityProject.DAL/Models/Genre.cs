@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TechCareerActivityProject.DAL.Models
 {
-    public class Genre
+    public class Genre : BaseModel
     {
         public string Name { get; set; }
     }

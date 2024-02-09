@@ -1,4 +1,4 @@
-﻿@model List<TechCareerActivityProject.DAL.Models.Stage>
+﻿@model TechCareerActivityProject.DAL.Models.Home
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -24,9 +24,9 @@
             </div>
 
             <div class="span8">
-                <h2>Konser Listesi</h2>
+                <h2>Sahne Listesi</h2>
                 <div id="concerts">
-                    @foreach (var item in Model)
+                    @foreach (var item in Model.StageList)
                     {
                         <div class="concert">
                             <img src="~/lumia/assets/img/dummies/stage/@item.StageImage" alt="@item.StageType" width="200" height="250" />

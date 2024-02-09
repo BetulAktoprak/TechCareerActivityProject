@@ -13,5 +13,10 @@ namespace TechCareerActivityProject.DAL.Models
         {
             optionsBuilder.UseSqlServer();
         }
+
+        public DbSet<Concert> Concerts { get; set; }
+        public DbSet<Festival> Festivals  { get; set; }
+        public DbSet<Stage> Stages { get; set; }
+        public DbSet<Exhibition> Exhibitions { get; set; }
     }
 }

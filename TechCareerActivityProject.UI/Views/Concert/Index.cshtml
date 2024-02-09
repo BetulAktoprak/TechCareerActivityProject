@@ -1,4 +1,4 @@
-﻿@model List<TechCareerActivityProject.DAL.Models.Concert>
+﻿@model TechCareerActivityProject.DAL.Models.Home
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -28,7 +28,7 @@
             <div class="span8">
                 <h2>Konser Listesi</h2>
                 <div id="concerts">
-                    @foreach (var item in Model)
+                    @foreach (var item in Model.ConcertList)
                     {
                         <div class="concert">
                             <img src="~/lumia/assets/img/dummies/concert/@item.ConcertImage" alt="@item.ConcertType" width="200" height="250" />
@@ -36,7 +36,7 @@
                             <p>@item.ConcertDescription</p>
                             <p>@item.ConcertTime</p>
                             <p>@item.ConcertLocation</p>
-
+                            <p><a class="btn btn-primary" href="/Concert/Details/@item.Id">Detaylar</a></p>
                         </div>
                     }
                 </div>

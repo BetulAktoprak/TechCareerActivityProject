@@ -1,0 +1,74 @@
+﻿@model TechCareerActivityProject.DAL.Models.Stage
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="subintro">
+    <div class="container">
+        <div class="row">
+            <div class="span8">
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="maincontent">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <article>
+                    <div class="heading">
+                        <h4>@Model.StageName</h4>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                    <div class="row">
+                        <div class="span8">
+                            <!-- start flexslider -->
+                            <div class="flexslider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="~/lumia/assets/img/dummies/stage/@Model.StageImage" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="~/lumia/assets/img/dummies/stage/@Model.StageImage" alt="" />
+                                    </li>
+                                    <li>
+                                        <img src="~/lumia/assets/img/dummies/stage/@Model.StageImage" alt="" />
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end flexslider -->
+                            <p>
+                                @Model.StageDescription
+                                Cu cum noster euismod appellantur, mundi vitae vim ut, ea sea scripta expetendis vituperatoribus. Et cibo dicat impetus cum, id his quodsi scripserit. Nec purto habeo recteque eu. Posse oportere accusamus an sit, ex quando phaedrum sapientem ius. Perfecto
+                                ocurreret no nam, eu quas cetero qui, vel ea minim nusquam salutatus. Nemore integre his ei, tollit eirmod eam at.
+                            </p>
+                        </div>
+                        <div class="span4">
+                            <aside>
+                                <div class="widget">
+                                    <div class="project-widget">
+                                        <h4 class="rheading">Sahne detayı<span></span></h4>
+                                        <ul class="project-detail">
+                                            <li><label>Sahne adı :</label> @Model.StageName</li>
+
+                                            <li><label>Sahne tarihi :</label> @Model.StageTime</li>
+                                            <li><label>Sahne yeri :</label> @Model.StageLocation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </article>
+                <!-- end article full post -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+

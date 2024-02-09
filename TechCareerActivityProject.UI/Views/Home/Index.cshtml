@@ -56,7 +56,7 @@
                     <img src="~/lumia/assets/img/dummies/concert/@item.ConcertImage" alt="" width="250" height="220" />
                 <div class="box">
                     <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
+                        <a href="/Concert/Details/@item.Id"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
                         <h4><b>@item.ConcertName</b><br />@item.ConcertType</h4>
                         <p><i class="icon-calendar"></i>@item.ConcertTime</p>
                         <p><i class="icon-map-marker"></i>@item.ConcertLocation</p>
@@ -68,7 +68,9 @@
         </div>
 
         <div class="row">
-            <button type="button" class="btn btn-success btn-lg btn-block">TÜMÜNÜ GÖR</button>
+           
+            <button type="button" class="btn btn-success btn-lg btn-block" onclick="window.location.href='/Concert/Index/'">TÜMÜNÜ GÖR</button>
+           
         </div>
 
         <div class="row">
@@ -78,7 +80,7 @@
                     <img src="~/lumia/assets/img/dummies/festival/@item.FestivalImage" alt="" width="250" height="220" />
                 <div class="box">
                     <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
+                            <a href="/Festival/Details/@item.Id"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
                         <h5><b>@item.FestivalName</b><br />@item.FestivalType</h5>
                         <p><i class="icon-calendar"></i>@item.FestivalTime</p>
                         <p><i class="icon-map-marker"></i>@item.FestivalLocation</p>
@@ -90,7 +92,7 @@
         </div>
 
         <div class="row">
-            <button type="button" class="btn btn-success btn-lg btn-block">TÜMÜNÜ GÖR</button>
+            <button type="button" class="btn btn-success btn-lg btn-block" onclick="window.location.href='/Festival/Index/'">TÜMÜNÜ GÖR</button>
         </div>
 
         <div class="row">
@@ -100,7 +102,7 @@
                     <img src="~/lumia/assets/img/dummies/stage/@item.StageImage" alt="" width="250" height="220" />
                 <div class="box">
                     <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
+                            <a href="/Stage/Details/@item.Id"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
                         <h4><b>@item.StageName</b><br />@item.StageType</h4>
                         <p><i class="icon-calendar"></i>@item.StageTime</p>
                         <p><i class="icon-map-marker"></i>@item.StageLocation</p>
@@ -112,7 +114,7 @@
         </div>
 
         <div class="row">
-            <button type="button" class="btn btn-success btn-lg btn-block">TÜMÜNÜ GÖR</button>
+            <button type="button" class="btn btn-success btn-lg btn-block" onclick="window.location.href='/Stage/Index/'">TÜMÜNÜ GÖR</button>
         </div>
 
         <div class="row">
@@ -122,7 +124,7 @@
                     <img src="~/lumia/assets/img/dummies/exhibition/@item.ExhibitionImage" alt="" width="250" height="220" />
                 <div class="box">
                     <div class="divcenter">
-                        <a href="#"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
+                            <a href="/Exhibition/Details/@item.Id"><i class="icon-circled icon-48 icon-magic active icon"></i></a>
                         <h4><b>@item.ExhibitionName</b><br />@item.ExhibitionType</h4>
                         <p><i class="icon-calendar"></i>@item.ExhibitionTime</p>
                         <p><i class="icon-map-marker"></i>@item.ExhibitionLocation</p>
@@ -134,7 +136,7 @@
         </div>
 
         <div class="row">
-            <button type="button" class="btn btn-success btn-lg btn-block">TÜMÜNÜ GÖR</button>
+            <button type="button" class="btn btn-success btn-lg btn-block" onclick="window.location.href='/Exhibition/Index/'">TÜMÜNÜ GÖR</button>
         </div>
 
         <br /><br />
