@@ -9,8 +9,14 @@ namespace TechCareerActivityProject.UI.Controllers
     public class ConcertController : Controller
     {
 
-        public IActionResult Index()
+        public IActionResult Index(string value)
         {
+            if (!string.IsNullOrEmpty(value))
+            {
+                var filteredConcerts = ConcertRepository.FilterConcerts(value);
+               
+                return View("Index", new Home { ConcertList = filteredConcerts });
+            }
             var model = new Home()
             {
                 ConcertList = ConcertRepository.Concerts
@@ -22,5 +28,7 @@ namespace TechCareerActivityProject.UI.Controllers
         {
             return View(ConcertRepository.GetById(id));
         }
+
+       
     }
 }

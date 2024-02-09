@@ -112,5 +112,12 @@ namespace TechCareerActivityProject.DAL.Data
         {
             return _stages.FirstOrDefault(c => c.Id == id);
         }
+
+        public static List<Stage> FilterStage(string search)
+        {
+            search = search.ToLower();
+
+            return _stages.Where(stage => stage.StageName.ToLower().Contains(search)).ToList();
+        }
     }
 }

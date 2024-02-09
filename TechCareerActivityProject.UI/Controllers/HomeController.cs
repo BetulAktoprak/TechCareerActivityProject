@@ -20,6 +20,7 @@ namespace TechCareerActivityProject.UI.Controllers
             {
                 new Concert
                 {
+                    Id = 1,
                     ConcertName = "INNELLEA",
                     ConcertDescription = "Elektronik Müzik",
                     ConcertTime = "10 Şubat Cumartesi",
@@ -28,6 +29,7 @@ namespace TechCareerActivityProject.UI.Controllers
                 },
                 new Concert
                 {
+                    Id = 6,
                     ConcertName = "BERKAY",
                     ConcertDescription = "Pop Müzik",
                     ConcertTime = "10 Şubat Cumartesi",
@@ -36,6 +38,7 @@ namespace TechCareerActivityProject.UI.Controllers
                 },
                  new Concert
                 {
+                     Id = 2,
                     ConcertName = "SILA",
                     ConcertDescription = "Pop Müzik",
                     ConcertTime = "14 Şubat Çarşamba",
@@ -44,6 +47,7 @@ namespace TechCareerActivityProject.UI.Controllers
                 },
                 new Concert
                 {
+                    Id = 3,
                     ConcertName = "MABEL MATİZ",
                     ConcertDescription = "Pop Müzik",
                     ConcertTime = "14 Şubat Çarşamba",
@@ -55,6 +59,7 @@ namespace TechCareerActivityProject.UI.Controllers
             {
                 new Festival
                 {
+                    Id = 1,
                     FestivalName = "SONAR ISTANBUL 2024",
                     FestivalDescription = "Festival",
                     FestivalTime = "26-28 Nisan",
@@ -63,6 +68,7 @@ namespace TechCareerActivityProject.UI.Controllers
                 },
                 new Festival
                 {
+                    Id = 2,
                     FestivalName = "HOLIFEST",
                     FestivalDescription = "Festival",
                     FestivalTime = "25-27 Mayıs",
@@ -71,6 +77,7 @@ namespace TechCareerActivityProject.UI.Controllers
                 },
                 new Festival
                 {
+                    Id = 3,
                     FestivalName = "AKDENİZ GENÇLİK FESTİVALİ",
                     FestivalDescription = "Festival",
                     FestivalTime = "3-5 Mayıs",
@@ -79,6 +86,7 @@ namespace TechCareerActivityProject.UI.Controllers
                 },
                 new Festival
                 {
+                    Id = 4,
                     FestivalName = "KOCAELİ MÜZİK FESTİVALİ",
                     FestivalDescription = "Festival",
                     FestivalTime = "10-12 Mayıs",
@@ -90,6 +98,7 @@ namespace TechCareerActivityProject.UI.Controllers
             {
                 new Stage
                 {
+                    Id = 1,
                     StageName = "CİMRİ",
                     StageDescription = "Tiyatro",
                     StageTime = "14 Şubat Çarşamba",
@@ -98,6 +107,7 @@ namespace TechCareerActivityProject.UI.Controllers
                 },
                 new Stage
                 {
+                    Id = 2,
                     StageName = "AYDINLIKEVLER",
                     StageDescription = "Tiyatro",
                     StageTime = "15 Şubat Perşembe",
@@ -106,6 +116,7 @@ namespace TechCareerActivityProject.UI.Controllers
                 },
                 new Stage
                 {
+                    Id = 3,
                     StageName = "ZENGİN MUTFAĞI",
                     StageDescription = "Tiyatro",
                     StageTime = "16 Şubat Cuma",
@@ -114,6 +125,7 @@ namespace TechCareerActivityProject.UI.Controllers
                 },
                 new Stage
                 {
+                    Id = 4,
                     StageName = "MONTAİGNE",
                     StageDescription = "Tiyatro",
                     StageTime = "17 Şubat Cumartesi",
@@ -125,6 +137,7 @@ namespace TechCareerActivityProject.UI.Controllers
             {
                 new Exhibition
                 {
+                    Id = 1,
                     ExhibitionName = "MAT COLLISHAW: ARİTMİ",
                     ExhibitionDescription = "Sergi",
                     ExhibitionTime = "18 Ağustos'a Kadar",
@@ -133,6 +146,7 @@ namespace TechCareerActivityProject.UI.Controllers
                 },
                 new Exhibition
                 {
+                    Id = 2,
                     ExhibitionName = "YAŞASIN CUMHURİYET",
                     ExhibitionDescription = "Sergi",
                     ExhibitionTime = "31 Aralık'a Kadar",
@@ -141,6 +155,7 @@ namespace TechCareerActivityProject.UI.Controllers
                 },
                 new Exhibition
                 {
+                    Id = 5,
                     ExhibitionName = "RENKLİ ANADOLU",
                     ExhibitionDescription = "Sergi",
                     ExhibitionTime = "7 Nisan'a Kadar",
@@ -149,6 +164,7 @@ namespace TechCareerActivityProject.UI.Controllers
                 },
                 new Exhibition
                 {
+                    Id = 7,
                     ExhibitionName = "KENDİ GÖLGESİNDE",
                     ExhibitionDescription = "Sergi",
                     ExhibitionTime = "7 Nisan'a Kadar",

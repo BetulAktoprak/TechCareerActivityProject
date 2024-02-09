@@ -103,5 +103,12 @@ namespace TechCareerActivityProject.DAL.Data
         {
             return _exhibitions.FirstOrDefault(c => c.Id == id);
         }
+
+        public static List<Exhibition> FilterExhibition(string search)
+        {
+            search = search.ToLower();
+
+            return _exhibitions.Where(exhibition => exhibition.ExhibitionName.ToLower().Contains(search)).ToList();
+        }
     }
 }

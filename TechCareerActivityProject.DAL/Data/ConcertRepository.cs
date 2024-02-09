@@ -102,5 +102,12 @@ namespace TechCareerActivityProject.DAL.Data
         {
             return _concerts.FirstOrDefault(c => c.Id == id);
         }
+
+        public static List<Concert> FilterConcerts(string search)
+        {
+            search = search.ToLower();
+
+            return _concerts.Where(concert => concert.ConcertName.ToLower().Contains(search)).ToList();
+        }
     }
 }

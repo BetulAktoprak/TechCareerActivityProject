@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 using TechCareerActivityProject.DAL.Data;
 using TechCareerActivityProject.DAL.Models;
 
@@ -6,8 +7,14 @@ namespace TechCareerActivityProject.UI.Controllers
 {
     public class FestivalController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(string value)
         {
+            if (!string.IsNullOrEmpty(value))
+            {
+                var filteredFestival = FestivalRepository.FilterFestival(value);
+
+                return View("Index", new Home { FestivalList = filteredFestival });
+            }
             var model = new Home()
             {
                 FestivalList = FestivalRepository.Festivals

@@ -85,5 +85,12 @@ namespace TechCareerActivityProject.DAL.Data
         {
             return _festivals.FirstOrDefault(c => c.Id == id);
         }
+
+        public static List<Festival> FilterFestival(string search)
+        {
+            search = search.ToLower();
+
+            return _festivals.Where(festival => festival.FestivalName.ToLower().Contains(search)).ToList();
+        }
     }
 }
